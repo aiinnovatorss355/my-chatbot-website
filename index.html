@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Chatbot Website</title>
+    
+    <!-- Dialogflow Messenger Script -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 </head>
 <body>
     <h1>Welcome to My Chatbot!</h1>
     <p>Feel free to chat with me below:</p>
-    
-    <!-- Embed Dialogflow Chatbot -->
-    <iframe
-        allow="microphone;"
-        width="350"
-        height="430"
-        src="https://console.dialogflow.com/api-client/demo/embedded/fba4e68b-1879-42df-8726-ac99a95c1b8e">
-    </iframe>
 
+    <!-- Dialogflow Messenger chatbot embedded here -->
+    <df-messenger
+        intent="WELCOME"  <!-- Optional: The first intent the chatbot triggers -->
+        chat-title="Ford_Truck_Recommender1"  <!-- Title of your chatbot (you can change this) -->
+        agent-id="fba4e68b-1879-42df-8726-ac99a95c1b8e"  <!-- Your unique agent ID from Dialogflow -->
+        language-code="en"  <!-- Language code of your chatbot (default is English) -->
+    ></df-messenger>
+    
 </body>
 </html>
